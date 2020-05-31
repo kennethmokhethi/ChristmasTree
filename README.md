@@ -1,3 +1,3 @@
 # ChristmasTree
-Concept of design patterns
-UML.png
+Concept of design pattern
+
