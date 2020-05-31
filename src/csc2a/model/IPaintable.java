@@ -1,4 +1,4 @@
-package model;
+package csc2a.model;
 
 public interface IPaintable {
 

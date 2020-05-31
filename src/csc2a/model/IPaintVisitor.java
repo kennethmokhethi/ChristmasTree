@@ -1,4 +1,4 @@
-package model;
+package csc2a.model;
 
 import csc2a.model.Rectangle;
 import csc2a.model.Triangle;

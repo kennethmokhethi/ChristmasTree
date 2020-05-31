@@ -1,11 +1,11 @@
-package ui;
+package csc2a.ui;
 
 import java.util.ArrayList;
 
+import csc2a.model.IPaintable;
+import csc2a.model.TreePaintVisitor;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import model.IPaintable;
-import model.TreePaintVisitor;
 
 public class PianterCanvas extends Canvas{
 	
