@@ -36,12 +36,6 @@ public class PianterCanvas extends Canvas{
 		for(IPaintable ipaintable : ipaintableObjects)
 		{
 			ipaintable.accept(treePaintVisitor);
-		}
-		
-		
+		}	
 	}
-	
-	
-	
-
 }

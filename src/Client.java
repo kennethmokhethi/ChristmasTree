@@ -28,9 +28,8 @@ public class Client extends Application{
 
 	//BEFORE REFACTORING
 
-@Override
-	public void start(Stage primaryStage) throws Exception {
-	    
+    @Override
+	public void start(Stage primaryStage) throws Exception {  
 		PianterCanvas painterCanvas = new PianterCanvas();
 		Button button = new Button("Draw Xmas tree");
 		
@@ -38,15 +37,13 @@ public class Client extends Application{
 			
 			ArrayList<IPaintable> ipaintableObjects = new ArrayList<>();
 			//IPaintable rectangle = new Rectangle(Color.GREEN, 120, 10, 50, 100);
-			
 			IPaintable baseTraingle = new Triangle(Color.GREEN,200,130,320,270,105,270);
 			IPaintable middleTraingle = new Triangle(Color.GREEN,200,60,300,200,115,200);
 			IPaintable topTraingle = new Triangle(Color.GREEN,200,10,280,130,135,130);
 			//ipaintableObjects.add(rectangle);
 			ipaintableObjects.add(middleTraingle);
 			ipaintableObjects.add(topTraingle);
-			ipaintableObjects.add(baseTraingle);
-					
+			ipaintableObjects.add(baseTraingle);		
 			painterCanvas.setIPaintableObjects(ipaintableObjects);
 					
 		});
@@ -72,29 +69,24 @@ public class Client extends Application{
 	
 	//AFTER REFACTORING
 	@Override
-	public void start(Stage primaryStage) throws Exception {
-	    
+	public void start(Stage primaryStage) throws Exception {    
 	    painterCanvas = new PianterCanvas();
-		Button button = new Button("Draw Xmas tree");
-		
+		Button button = new Button("Draw Xmas tree");	
 		button.setOnAction((ActionEvent e) ->{
 			set_values_of_objects_to_drawn();			
-		});
-		
+		});	
 		primaryStage.setScene(create_scene(button));
 		primaryStage.show();	
 	}
 	
 	private void set_values_of_objects_to_drawn()
 	{
-		
 		//IPaintable rectangle = new Rectangle(Color.GREEN, 120, 10, 50, 100);	
 		IPaintable baseTraingle = new Triangle(Color.GREEN,200,130,320,270,105,270);
 		IPaintable middleTraingle = new Triangle(Color.GREEN,200,60,300,200,115,200);
 		IPaintable topTraingle = new Triangle(Color.GREEN,200,10,280,130,135,130);
 		//ipaintableObjects.add(rectangle);
-		add_Objects_to_array(baseTraingle,middleTraingle,topTraingle);
-		
+		add_Objects_to_array(baseTraingle,middleTraingle,topTraingle);	
 	}
 	
 	private void add_Objects_to_array(IPaintable... shapeObjects)
@@ -126,5 +118,4 @@ public class Client extends Application{
 		root.setCenter(container);
 		return new Scene(root);		
 	}
-
 }

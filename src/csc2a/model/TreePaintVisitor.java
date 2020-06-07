@@ -16,15 +16,12 @@ public class TreePaintVisitor implements IPaintVisitor{
 	
 	public void paint(Rectangle rectangle) {
 		graphicsContext.setFill(rectangle.getColor());
-		graphicsContext.fillRect(rectangle.getX(), rectangle.getY(), rectangle.getWidth(), rectangle.getHeight());
-		
+		graphicsContext.fillRect(rectangle.getX(), rectangle.getY(), rectangle.getWidth(), rectangle.getHeight());	
 	}
 
-	
 	public void paint(Triangle triangle) {
 		
 		graphicsContext.setFill(triangle.getColor());
 		graphicsContext.fillPolygon(triangle.getXCoords(),triangle.getYCoords(),3);
 	}
-
 }
