@@ -27,7 +27,8 @@ public class Client extends Application{
 	}
 
 	//BEFORE REFACTORING
-	@Override
+
+@Override
 	public void start(Stage primaryStage) throws Exception {
 	    
 		PianterCanvas painterCanvas = new PianterCanvas();
@@ -68,6 +69,7 @@ public class Client extends Application{
 		
 	}
 	
+	
 	//AFTER REFACTORING
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -85,16 +87,24 @@ public class Client extends Application{
 	
 	private void set_values_of_objects_to_drawn()
 	{
-		ArrayList<IPaintable> ipaintableObjects = new ArrayList<>();
+		
 		//IPaintable rectangle = new Rectangle(Color.GREEN, 120, 10, 50, 100);	
 		IPaintable baseTraingle = new Triangle(Color.GREEN,200,130,320,270,105,270);
 		IPaintable middleTraingle = new Triangle(Color.GREEN,200,60,300,200,115,200);
 		IPaintable topTraingle = new Triangle(Color.GREEN,200,10,280,130,135,130);
 		//ipaintableObjects.add(rectangle);
-		ipaintableObjects.add(middleTraingle);
-		ipaintableObjects.add(topTraingle);
-		ipaintableObjects.add(baseTraingle);			
-		painterCanvas.setIPaintableObjects(ipaintableObjects);
+		add_Objects_to_array(baseTraingle,middleTraingle,topTraingle);
+		
+	}
+	
+	private void add_Objects_to_array(IPaintable... shapeObjects)
+	{
+		ArrayList<IPaintable> ipaintableObjects = new ArrayList<>();	
+		for(IPaintable object_to_add:shapeObjects)
+		{
+			ipaintableObjects.add(object_to_add);
+		}	
+		painterCanvas.setIPaintableObjects(ipaintableObjects);	
 	}
 	
 	private StackPane set_up_layout_environment()
