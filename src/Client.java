@@ -1,9 +1,4 @@
-
-
 import java.util.ArrayList;
-
-
-
 import csc2a.model.IPaintable;
 import csc2a.model.Rectangle;
 import csc2a.model.Triangle;
@@ -27,7 +22,6 @@ public class Client extends Application{
 	}
 
 	//BEFORE REFACTORING
-
     @Override
 	public void start(Stage primaryStage) throws Exception {  
 		PianterCanvas painterCanvas = new PianterCanvas();
@@ -62,10 +56,8 @@ public class Client extends Application{
 		Scene scene = new Scene(root);
 		
 		primaryStage.setScene(scene);
-		primaryStage.show();
-		
+		primaryStage.show();	
 	}
-	
 	
 	//AFTER REFACTORING
 	@Override
